@@ -1,0 +1,10 @@
+.git
+.gitignore
+.venv
+Dockerfile
+PIA-CA-Montreal-1738528510.conf
+__pycache__
+run-docker.sh
+.dockerignore
+README.md
+

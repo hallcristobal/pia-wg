@@ -11,14 +11,15 @@ urllib3.disable_warnings(urllib3.exceptions.SubjectAltNameWarning)
 
 
 class piawg:
-    def __init__(self):
+    def __init__(self, fetch_servers=True):
         self.server_list = {}
-        self.get_server_list()
         self.region = None
         self.token = None
         self.publickey = None
         self.privatekey = None
         self.connection = None
+        if fetch_servers:
+            self.get_server_list()
 
     def get_server_list(self):
         r = requests.get('https://serverlist.piaservers.net/vpninfo/servers/v4')
